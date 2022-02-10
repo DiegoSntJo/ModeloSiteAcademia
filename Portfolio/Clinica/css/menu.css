@@ -97,6 +97,7 @@ nav i.material-icons, nav a.button-collapse i {height: 94px; line-height: 94px;}
     .btn-planos{width: 25%;}
     .btn-sair {color:white;}
     .login input {min-width:100%;}
+    .sidenav-trigger a{margin:15px 18px;}
     }
     /* SMALL DEVICES - TABLETS*/
     @media screen and (min-width: 768px) {
@@ -109,6 +110,7 @@ nav i.material-icons, nav a.button-collapse i {height: 94px; line-height: 94px;}
     .newsletter input {width: 70%; padding: 2%; float: left; margin-right: 1%;}
     .newsletter button {width: 29%; padding: 2%; float: right; margin-top: 0;}
     .login input {min-width:50%;}
+    .sidenav-trigger a{margin:15px 18px;}
     }
     /* MEDIUM DEVICES - TABLETS & DESKTOPS*/
     @media screen and (min-width: 960px) {
@@ -123,9 +125,10 @@ nav i.material-icons, nav a.button-collapse i {height: 94px; line-height: 94px;}
     .newsletter input {width: 60%; float: none;}
     .newsletter button {width: 20%; float: none;}
     .login input {min-width:50%;}
+    .sidenav-trigger a{margin:15px 18px;}
     }
     /* LARGE DEVICES - WIDE SCREENS*/
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 970px) {
     .btn-menu {display: none;}
     .btn-close {display: none;}
     .btn-sair {color:#da6709;cursor: pointer;}

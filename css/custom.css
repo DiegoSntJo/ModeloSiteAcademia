@@ -63,12 +63,13 @@ nav i.material-icons, nav a.button-collapse i {height: 94px; line-height: 94px;}
 /* MEDIA */
 @media only screen and (max-width: 480px) {
     .card-image-horizontal {display: none;}
-
+    .sidenav li>a{color:#000;font-weight:100;}
   }
 @media only screen and (min-width: 601px) {
     .banner {padding-top: 4.5rem;}
     .banner h2 {font-size: 4rem;}
-    .container {width: 85%;}   
+    .container {width: 85%;}
+    .sidenav li>a{color:#000;font-weight:100;}   
   }
 @media only screen and (min-width: 993px) {
     .banner {padding-top: 5rem;}

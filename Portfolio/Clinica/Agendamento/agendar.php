@@ -83,7 +83,7 @@
                     <div class="col s12 center">
                         <h2 class="light titulo black-text">Agendamento</h2>
                         <p class="light paragrafo black-text">Realize seu agendamento.</p>
-                        <p class="light recado black-text">(Caso esteja editando um agendamento, certifique-se de mudar o dia, para que não ocorra um erro.)</p>
+                        <p class="light recado black-text">(Caso esteja editando um agendamento, certifique-se de mudar o dia, para evitar que ocorram erros.)</p>
                     </div>
                 </div>
                 <br>

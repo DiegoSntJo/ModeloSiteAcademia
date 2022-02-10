@@ -64,7 +64,7 @@
         </div>
         <div class="col s12 l12">
             <p class="light">
-            Nós da Montain monkey dev, temos como dever principal desenvolver um site front-end que atenda sua demanda e de sua empresa, para que você forneça seu serviço de uma maneira atual, responsiva e arrojada, para seus clientes.
+            Nós da Montain monkey dev, temos como dever principal desenvolver um site front-end que atenda sua demanda e de sua empresa, para que você forneça seu serviço de uma maneira atual, responsiva e arrojada.
             </p>
         </div>
     </div>
