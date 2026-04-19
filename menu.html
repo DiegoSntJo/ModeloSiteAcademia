@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Gaditas</title>
+    <link rel="icon" href="img/fav.png">
+        <!-- GOOGLE ICONS -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- MATERIALIZE CSS -->		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<!-- CUSTOM CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <!-- HEADER -->
+	<header>
+	    <!-- MENU MOBILE -->
+		<ul class="side-nav" id="menu-mobile">
+			<li><a class="hide-menu" href="#home">Home</a></li>
+			<li><a class="hide-menu modal-trigger" href="#cadastroAluno-modal">Cadastrar Aluno</a></li>
+            <li><a class="hide-menu" href="index.html" onclick="return confirm('Tem certeza que deseja sair ?')">Sair</a></li>
+		</ul>
+
+	    <div class="navbar-fixed">
+		<nav class="navbar z-depth-0">
+			<div class="nav-wrapper container">
+				<h1 class="logo_text">Gaditas Academy </h1>
+				<a href=""><img class="logo_img" src="img/logo.png" alt="Academia Gaditas"></a>
+
+				<ul class="right light hide-on-med-and-down">
+					<li><a href="#home">Home</a></li>
+					<li><a class="dropdown-trigger" data-activates="dropdown-adicionar">Cadastrar</a></li>
+                    <li><a href="index.html" onclick="return confirm('Tem certeza que deseja sair ?')">Sair</a></li>
+				</ul>			
+
+				<a href="#" data-activates="menu-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+			</div>
+		</nav>
+		</div>
+
+        <!-- DROPDOWN -->
+        <ul id="dropdown-adicionar" class="dropdown-content">
+            <li><a href="#cadastroAluno-modal" class="modal-trigger">Aluno</a></li>
+            <li><a href="#cadastroUsuario-modal" class="modal-trigger">Usuário</a></li>
+        </ul>
+
+	</header>
+
+    <!--CADASTRO DE ALUNO-->
+    <div class="row container">
+        <!--MODAL CADASTRO DE ALUNOS-->
+        <div class="modal"  id="cadastroAluno-modal">
+            <div class="modal-content">
+                <h3>Cadastrar aluno</h3>
+                <form>
+                    <div class="input-field col s12">
+                        <select type="text" name="faixa" id="idfaixa" autocomplete="off"  value="Graduação">
+                            <option value="Branca">Branca</option>
+                            <option value="CinzaBranca">Cinza e Branca</option>
+                            <option value="Cinza">Cinza</option>
+                            <option value="CinzaPreta">Cinza e Preta</option>
+                            <option value="AmarelaBranca">Amarela e Branca</option>
+                            <option value="Amarela">Amarela</option>
+                            <option value="AmarelaPreta">Amarela e Preta</option>
+                            <option value="LaranjaBranca">Laranja e Branca</option>
+                            <option value="Laranja">Laranja</option>
+                            <option value="LaranjaPreta">Laranja e Preta</option>
+                            <option value="VerdeBranca">Verde e Branca</option>
+                            <option value="Verde">Verde</option>
+                            <option value="VerdePreta">Verde e Preta</option>
+                            <option value=" Azul"> Azul</option>
+                            <option value="Roxa">Roxa</option>
+                            <option value="Marrom">Marrom</option>
+                            <option value="Preta">Preta</option>
+                            <option value="VermelhaPreta">Vermelha e Preta</option>
+                            <option value="VermelhaBranca"> Vermelha e Branca</option>
+                            <option value="Vermelha">Vermelha</option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Nome do aluno" autocomplete="off" required><br>
+                    <input type="email" placeholder="Email" autocomplete="off"><br>
+                    <input type="tel" placeholder="Telefone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+                    <input type="date" placeholder="Data de Nascimento" name="date"><br>
+                    <input type="submit" value="CADASTRAR">
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <a class="btn blue-logo modal-action modal-close">Voltar</a>
+            </div>
+        </div>
+    </div>
+    
+    <!--ALUNOS-->
+    <section class="alunos bloco">
+        <div class="row container">
+            <div class="tabela" id="alunos">
+                <h3> Alunos </h3>
+                <div class="corpo-tabela">
+                    <table>
+                        <thead>
+                            <th><img height="50" src=""></th>
+                            <th>Editar</th>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Graduação</th>
+                            <th>Data de Nascimento</th>
+                            <th>Presença</th>
+                        </thead>
+    
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td><button id="editar" value="Editar" onclick="editar()"><i class="material-icons">edit</i></button></td>
+                                <td>José Augusto</td>
+                                <td>79 9 9999-9999</td>
+                                <td>Black belt</td>
+                                <td>19/08/1998</td>
+                                <td><input type="button" id="presente" value="Presente" onclick="presente()"><input type="button" id="faltou" value="Faltou" onclick="faltou()"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <!--RODAPÉ-->
+    <footer class="rodape">
+        <div class="row container center">
+            <img src="img/logo.png" class="logo_img">
+            <p class="light white-text">© CTA GADITAS ACADEMY 2022 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- MATERIALIZE JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+    <!-- JAVASCRIPT -->
+    <script>
+        
+        function presente (){
+            confirm("Deseja adicionar uma presença neste aluno ?");
+        }
+
+        function faltou (){
+            confirm("Deseja adicionar uma falta neste aluno ?");
+        }
+
+        // INICIALIZAÇÃO 
+        $(document).ready(function(){
+            // MENU MOBILE
+            $(".button-collapse").sideNav();
+            // LINK INTERNO
+            $(".scrollspy").scrollSpy({
+                scrollOffset: 0
+            });
+            // MODAL
+            $(".modal").modal();
+            //DROPDOWN
+            $('.dropdown-trigger').dropdown({
+                hover: true,
+                belowOrigin: true,
+            });
+            // SELECT
+            $(document).ready(function(){
+                $('select').material_select();
+            });
+            // ESCONDER MENU AO CLICAR
+            $(".hide-menu").click(function(){
+                $(".button-collapse").sideNav("hide");
+            });
+        });
+
+        // ADICIONANDO NAVCOLOR
+        $(window).on("scroll", function(){
+            if($(window).scrollTop() > 100) {
+                $(".navbar").addClass("nav-color");
+            } else {
+                $(".navbar").removeClass("nav-color");
+            }
+        });
+    </script>	
+</body>
+</html>
